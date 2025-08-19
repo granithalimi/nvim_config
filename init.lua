@@ -45,7 +45,7 @@ require("lazy").setup({
 				require("rose-pine").setup({
 					variant = "moon", -- "main", "moon" (dark), "dawn" (light)
 					disable_italics = false,
-          disable_background = true,
+					-- disable_background = true,
 				})
 				vim.cmd("colorscheme rose-pine")
 			end,
@@ -98,7 +98,12 @@ require("lazy").setup({
 			"nvim-tree/nvim-tree.lua",
 			dependencies = { "nvim-tree/nvim-web-devicons" },
 			config = function()
-				require("nvim-tree").setup()
+				require("nvim-tree").setup({
+					git = {
+						enable = true,
+						ignore = false,
+					},
+				})
 			end,
 		},
 		-- Lualine
@@ -156,7 +161,7 @@ require("lazy").setup({
 							"tailwindcss",
 							"pyright",
 							"intelephense",
-              "jdtls",
+							"jdtls",
 						},
 					})
 				end,
