@@ -29,6 +29,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamed"
 vim.opt.wrap = false
+vim.opt.guicursor = "a:block"
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -43,7 +44,7 @@ require("lazy").setup({
       config = function()
         -- Set colorscheme (with optional settings)
         require("rose-pine").setup({
-          variant = "moon", -- "main", "moon" (dark), "dawn" (light)
+          variant = "main", -- "main", "moon" (dark), "dawn" (light)
           disable_italics = false,
           -- disable_background = true,
         })
